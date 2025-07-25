@@ -19,7 +19,13 @@ function displayNews(articles) {
 
     for (const article of articles) {
         const articleDiv = document.createElement('div');
-        articleDiv.className = 'article-card'; 
+        articleDiv.className = 'article-card';
+        
+        // Image
+        const img = document.createElement('img');
+        img.src = article.urlToImage; 
+        img.alt = article.title || 'Image not available';
+        articleDiv.appendChild(img); 
 
         // Headline
         const title = document.createElement('h4');

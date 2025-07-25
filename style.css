@@ -1,42 +1,75 @@
-/* Container that holds all news articles */
+/* General Reset and Font Setup */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f8;
+  color: #333;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+/* Main Heading */
+h1 {
+  text-align: center;
+  color: #2a2a72;
+  margin-bottom: 2rem;
+}
+
+/* Container for All Articles */
 #news {
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Individual Article Cards */
+.article-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  padding: 1rem;
+  display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  font-family: Arial, sans-serif;
+  transition: transform 0.2s ease;
 }
 
-/* Individual article card */
-#news div {
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.article-card:hover {
+  transform: translateY(-5px);
 }
 
-/* Headline/title of the article */
-#news h4 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
-  color: #333;
+/* News Image */
+.article-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
-/* Paragraphs for author, date, etc. */
-#news p {
-  margin: 0.25rem 0;
-  font-size: 0.95rem;
+/* Article Title */
+.article-card h4 {
+  font-size: 1.1rem;
+  color: #1e3a8a;
+  margin: 0.5rem 0;
+}
+
+/* Author, Source, Date */
+.article-card p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
   color: #555;
 }
 
-/* Optional: styling for links inside articles */
-#news a {
-  color: #0077cc;
+/* Read More Link */
+.article-card a {
+  margin-top: 1rem;
+  align-self: flex-start;
   text-decoration: none;
+  color: #e63946;
+  font-weight: bold;
 }
 
-#news a:hover {
+.article-card a:hover {
   text-decoration: underline;
 }
