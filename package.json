@@ -1,0 +1,17 @@
+{
+  "name": "news-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel --open"
+  },
+  "keywords": [],
+  "author": "Sosina Kassa Demelash",
+  "license": "ISC",
+  "description": "This is a sample news website.",
+  "dependencies": {
+    "parcel": "^2.15.4",
+    "save-dev": "^0.0.1-security"
+  }
+}
